@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -11,9 +12,9 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="#777" /></svg>
+                <rect width="100%" height="100%" fill="#777" /></svg> -->
 
             <div class="container">
                 <div class="carousel-caption text-start">
@@ -24,9 +25,9 @@
             </div>
         </div>
         <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="#777" /></svg>
+                <rect width="100%" height="100%" fill="#777" /></svg> -->
 
             <div class="container">
                 <div class="carousel-caption">
@@ -37,9 +38,9 @@
             </div>
         </div>
         <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <rect width="100%" height="100%" fill="#777" /></svg>
+                <rect width="100%" height="100%" fill="#777" /></svg> -->
 
             <div class="container">
                 <div class="carousel-caption text-end">
@@ -60,7 +61,6 @@
     </button>
 </div>
 
-
 <!-- Marketing messaging and featurettes
   ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -72,40 +72,53 @@
         <div class="col-lg-4">
             <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
                 role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
+                <title>Wines</title>
+                <a href="{% url 'home' %}"><rect width="100%" height="100%" fill="#000" />
+                <defs>
+                    <clipPath id="circleView">
+                        <circle cx="140" cy="70" r="140" fill="#000" />
+                    </clipPath>
+                </defs>
+                <image width="140" height="200" href="/media/red_and_white_wine.jpg" clip-path="url(#circleView)" /></a>
             </svg>
 
-            <h2 class="fw-normal">Heading</h2>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the
-                first column.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            <h2 class="fw-normal">Wines</h2>
+            <p class="fat-font">Reds, whites and rosés sourced from the finest vignerons.</p>
+            <hr>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
                 role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
+                <title>Sparkling</title>
+                <a href="#"><rect width="100%" height="100%" fill="#000" />
+                <defs>
+                    <clipPath id="circleView">
+                        <circle cx="140" cy="70" r="140" fill="#000" />
+                    </clipPath>
+                </defs>
+                <image width="140" height="160" href="/media/sparkling_wine.jpg" clip-path="url(#circleView)" /></a>
             </svg>
 
-            <h2 class="fw-normal">Heading</h2>
-            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second
-                column.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            <h2 class="fw-normal">Sparkling</h2>
+            <p class="fat-font">From Champagnes to Proseccos they're sure to spark your interest.</p>
+            <hr>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
             <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
                 role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <title>Placeholder</title>
-                <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                    dy=".3em">140x140</text>
+                <title>Other</title>
+                <a href="#"><rect width="100%" height="100%" fill="#000" />
+                <defs>
+                    <clipPath id="circleView">
+                        <circle cx="140" cy="70" r="140" fill="#000" />
+                    </clipPath>
+                </defs>
+                <image width="140" height="110" href="/media/brandy_wine.jpg" clip-path="url(#circleView)" /></a>
             </svg>
 
-            <h2 class="fw-normal">Heading</h2>
-            <p>And lastly this, the third column of representative placeholder content.</p>
-            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+            <h2 class="fw-normal">Other</h2>
+            <p class="fat-font">Porto, Crème de Cassis, Cognac, don't miss out on these lovely nightcaps.</p>
+            <hr>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 </div><!-- /.container -->
