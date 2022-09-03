@@ -11,11 +11,15 @@ body {
       rgba(0, 0, 0, 0.5)), url('/media/vineyard_house.jpg') no-repeat center center fixed;
   background-size: cover;
   height: calc(100vh - 164px);
-  font-family: 'Cinzel', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: large;
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #fff;
+}
+
+.fancy-text {
+  font-family: 'Cinzel', serif;
 }
 
 .fat-font {
