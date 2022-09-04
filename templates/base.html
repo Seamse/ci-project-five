@@ -44,13 +44,14 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom fancy-text">
+            
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">THE WINERY</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="collapse navbar-collapse order-3" id="navbarCollapse">
                     <ul class="navbar-nav mx-auto mb-2 mb-md-0">
                         <li class="nav-item px-3">
                             <a class="nav-link" href="#">My Account</a>
@@ -61,16 +62,16 @@
                         <li class="nav-item px-3">
                             <a class="nav-link" href="#">The Winery Gazette</a>
                         </li>
-                        <li class="nav-item px-3">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-shopping-basket"></i>
-                            </a>
-                        </li>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-dark" type="submit"><i class="fas fa-search"></i></button>
                     </form>
+                </div>
+                <div class="order-md-4 order-1">
+                    <a class="nav-link px-3" href="#">
+                        <i class="fas fa-shopping-basket"></i>
+                    </a>
                 </div>
             </div>
         </nav>
