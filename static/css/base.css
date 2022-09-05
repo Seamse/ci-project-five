@@ -34,6 +34,11 @@ body {
   font-size: larger;
 }
 
+.image-container {
+  max-height: fit-content;
+  max-width: fit-content;
+}
+
 /* Product page Dropdown menu
   -------------------------------------------------- */
   .dropdown {
