@@ -11,8 +11,15 @@ def all_products(request):
 
     products = Product.objects.all()
     query = None
+    category = None
 
     if request.GET:
+
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+
+
         if 'search' in request.GET:
             query = request.GET['search']
             if not query:
