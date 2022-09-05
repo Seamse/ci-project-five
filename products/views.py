@@ -12,8 +12,17 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     category = None
+    sort = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            if 'l2h' in request.GET:
+                products = products.order_by("price")
+            elif 'h2l' in request.GET:
+                products = products.order_by("-price")
+            else:
+                products = products.order_by("-rating")
+
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
