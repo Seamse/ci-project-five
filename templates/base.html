@@ -71,6 +71,9 @@
                 <div class="order-md-4 order-1">
                     <a class="nav-link px-3" href="{% url 'basket' %}">
                         <i class="fas fa-shopping-basket"></i>
+                        {% if basket_items %}
+                        <span class='badge badge-warning' id='lblCartCount'> {{ product_count }} </span>
+                        {% endif %}
                     </a>
                 </div>
             </div>
