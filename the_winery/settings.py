@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'basket',
+    'checkout',
 
     # Other
     'django_countries',

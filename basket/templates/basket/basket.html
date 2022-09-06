@@ -39,10 +39,6 @@
                       </div>
                       <div class="d-flex flex-row align-items-center text-dark">
                         <div style="width: 50px;">
-                          <!-- <div class="input-group">
-                            <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1"
-                                max="6" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                        </div> -->
                           <h5 class="fw-normal mb-0">{{ item.quantity }}</h5>
                         </div>
                         <div style="width: 80px;">
@@ -124,11 +120,11 @@
                       <p class="mb-2">€{{ total_cost }}</p>
                     </div>
 
-                    <button type="button" class="btn btn-info btn-block btn-lg">
+                    <a type="button" href="{% url 'checkout' %}" class="btn btn-info btn-block btn-lg">
                       <div class="d-flex justify-content-between">
                         <span>Secure Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
                       </div>
-                    </button>
+                    </a>
 
                   </div>
                 </div>
