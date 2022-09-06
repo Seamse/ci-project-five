@@ -48,8 +48,7 @@
                         <div style="width: 80px;">
                           <h5 class="mb-0">€{{ item.product.price }}</h5>
                         </div>
-                        <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-
+                        <a href="{% url 'delete_item' item.product.id %}" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
                       </div>
                     </div>
                   </div>

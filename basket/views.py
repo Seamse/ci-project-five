@@ -22,3 +22,10 @@ def add_to_basket(request, item_id):
 
     request.session['cart'] = cart
     return redirect(request.META.get('HTTP_REFERER'))
+
+
+def delete_item(request, item_id):
+    cart = request.session.get('cart', {})
+    cart.pop(item_id)
+    request.session['cart'] = cart
+    return render(request, 'basket/basket.html')
