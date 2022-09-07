@@ -3,7 +3,6 @@ from . import models
 
 
 class CheckoutForm(forms.ModelForm):
-    email = forms.EmailField(required=True)
 
     class Meta:
         model = models.GenerateOrder
