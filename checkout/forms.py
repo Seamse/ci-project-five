@@ -5,7 +5,7 @@ from . import models
 class CheckoutForm(forms.ModelForm):
 
     class Meta:
-        model = models.GenerateOrder
+        model = models.NewOrder
         fields = [
             'first_name', 'last_name', 'email',
             'street_address1', 'street_address2',

@@ -10,8 +10,12 @@ from products.models import Product
 # Create your models here.
 
 
-class GenerateOrder(models.Model):
+class NewOrder(models.Model):
     """ Create shipping address and order number """
+
+    class Meta:
+        verbose_name_plural = 'Orders'
+
     order_number = models.CharField(max_length=32, null=False, editable=False)
     first_name = models.CharField(max_length=50, null=False, blank=False)
     last_name = models.CharField(max_length=50, null=False, blank=False)
@@ -63,7 +67,7 @@ class GenerateOrder(models.Model):
 
 
 class OrderLineItem(models.Model):
-    order = models.ForeignKey(GenerateOrder, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    order = models.ForeignKey(NewOrder, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
