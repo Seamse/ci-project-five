@@ -16,6 +16,11 @@
                       class="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</a></h5>
                 <hr>
 
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                  <div>
+                    <p class="mb-1 text-body">Basket:</p>
+                  </div>
+                </div>
                 {% if basket_items %}
                 {% for item in basket_items %}
                 <div class="card mb-3">
@@ -80,7 +85,7 @@
 
                     <a type="button" href="{% url 'checkout' %}" class="btn btn-info btn-block btn-lg">
                       <div class="d-flex justify-content-between">
-                        <span>Secure Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                        <span><i class="fas fa-lock me-2"></i>Secure Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
                       </div>
                     </a>
                     </form>
