@@ -22,8 +22,8 @@ body {
   font-family: 'Cinzel', serif;
 }
 
-.fat-font {
-  font-weight: 900;
+.text-larger {
+  font-size: x-large;
 }
 
 .bg-custom {
@@ -39,7 +39,7 @@ body {
   max-width: fit-content;
 }
 
-/* Remove styling from standard form
+/* Remove styling from standard form and add new
   -------------------------------------------------- */
 
 .remove-form-style {
@@ -49,6 +49,12 @@ body {
 
 .remove-form-style:focus {
   outline: none;
+}
+
+.form-shape {
+  margin-bottom: 2em;
+  background-color: #292b2c;
+  color: #fff;
 }
 
 /* Stripe
@@ -82,7 +88,7 @@ body {
 #payment-form .form-control,
 #card-element {
     color: #fff;
-    border: 1px solid #000;
+    border: 1px solid #292b2c;
 }
 
 /* Navbar Basket icon show product count
@@ -102,7 +108,7 @@ body {
 }
 #lblCartCount {
     font-size: 12px;
-    background: #000;
+    background: #292b2c;
     color: #fff;
     padding: 0 5px;
     vertical-align: top;
@@ -134,7 +140,7 @@ body {
   }
   .dropdown-content a:hover {
     color: #FFFFFF;
-    background-color: #000;
+    background-color: #292b2c;
   }
 
 

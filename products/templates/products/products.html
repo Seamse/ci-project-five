@@ -9,7 +9,7 @@
             <hr class="w-100 mb-1">
         </div>
         <div class="dropdown">
-            <button class="btn btn-light"><strong>Sort by:</strong></button>
+            <button class="btn btn-dark text-white">Sort by:</button>
             <div class="dropdown-content">
                 <a href="{% url 'products' %}?sort=price&l2h">Price (low to high)</a>
                 <a href="{% url 'products' %}?sort=price&h2l">Price (high to low)</a>
@@ -33,10 +33,10 @@
                             <img class="card-img-top img-fluid" src="/media/no_image.jpeg" alt="{{ product.name }}">
                         </a>
                         {% endif %}
-                        <div class="card-body bg-black pb-0">
+                        <div class="card-body bg-dark pb-0">
                             <p class="mb-0">{{ product.name }}</p>
                         </div>
-                        <div class="card-footer bg-black pt-0 border-0 text-left">
+                        <div class="card-footer bg-dark pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
                                     <div>
