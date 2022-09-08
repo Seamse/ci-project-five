@@ -18,6 +18,7 @@ def checkout(request):
     """ A view to render the page where personal details can be filled out """
 
     cart = request.session.get('cart', {})
+    print(cart)
     if not cart:
         messages.error(request, 'basket is empty')
         return redirect('products')
@@ -37,6 +38,7 @@ def checkout(request):
 
     context = {
         'form': form,
+        'S_P_K': os.environ.get('STRIPE_PUBLIC_KEY')
         # 'client_secret': intent.client_secret,
         # 'intent': intent,
     }
