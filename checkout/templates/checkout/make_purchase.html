@@ -5,127 +5,17 @@
 <section class="h-100 h-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col">
-        <div class="card">
-          <div class="card-body p-4">
-
-            <div class="row">
-
-              <div class="col-lg-7">
-                <h5 class="mb-3"><a href="{% url 'products' %}" class="text-body"><i
-                      class="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</a></h5>
-                <hr>
-
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                  <div>
-                    <p class="mb-1 text-body">Basket contents:</p>
-                  </div>
-                </div>
-                {% if basket_items %}
-                {% for item in basket_items %}
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-
-                        <div>
-                          <img src="{{ item.product.image.url }}" class="img-fluid rounded-3" alt="Shopping item"
-                            style="width: 65px;">
-                        </div>
-                        <div class="ms-3 text-dark">
-                          <h5>{{ item.product.name }}</h5>
-                          <p class="small mb-0">{{ item.product.vintage }}</p>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-row align-items-center text-dark">
-                        <div style="width: 50px;">
-                          <h5 class="fw-normal mb-0">{{ item.quantity }}</h5>
-                        </div>
-                        <div style="width: 80px;">
-                          <h5 class="mb-0">€{{ item.product.price }}</h5>
-                        </div>
-                        <a href="{% url 'delete_item' item.product.id %}" style="color: #cecece;"><i
-                            class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {% endfor %}
-                {% else %}
-                <p class="mb-1 text-body">Your basket is empty</p>
-                {% endif %}
-
-
-
-              </div>
-              <div class="col-lg-5">
-
-                <div class="card bg-primary text-white rounded-3">
-                  <div class="card-body">
-                    <div class="mb-4">
-                      <h5 class="mb-0">Please fill out your details</h5>
-                    </div>
-
-                    <form class="mt-4" action="{% url 'make_purchase' %}" method="POST">
-                      {% csrf_token %}
-                      {% for field in form %}
-                      <div class="form-outline form-white mb-1">
-                        {{ field.label_tag }}
-                        <span class="form-control">
-                          {{ field }}
-                        </span>
-                      </div>
-                      {% endfor %}
-                      <div class="form-check form-check-inline float-right mr-0 mt-2">
-                        {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-save-info">Save this delivery information to my
-                          profile</label>
-                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
-                          checked>
-                        {% else %}
-                        <label class="form-check-label" for="id-save-info">
-                          <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                          <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
-                        </label>
-                        {% endif %}
-                      </div>
-
-                      <hr class="my-4">
-
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-2">Subtotal</p>
-                        <p class="mb-2">€{{ total }}</p>
-                      </div>
-
-                      <div class="d-flex justify-content-between">
-                        <p class="mb-2">Shipping</p>
-                        <p class="mb-2">€{{ standard_delivery }}</p>
-                      </div>
-
-                      <div class="d-flex justify-content-between mb-4">
-                        <p class="mb-2">Total</p>
-                        <p class="mb-2">€{{ total_cost }}</p>
-                      </div>
-                      {% if from_account %}
-                      <a href="{% url 'account' %}" class="btn btn-info btn-block btn-lg">
-                        <div class="d-flex justify-content-between">
-                          <span><i class="fas fa-long-arrow-alt-left me-2"></i>Back to my account</span>
-                        </div>
-                      </a>
-                      {% endif %}
-                    </form>
-
-                  </div>
-                </div>
-
-              </div>
-
+      <div class="card bg-dark">
+        <div class="card-body p-4">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-7">
+              <p>Order successfully processed! Your order number is {{ order.number }}. A confirmation email will be
+                sent to {{ order.email} }.</p>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-  </div>
+ </div>
 </section>
 {% endblock %}
