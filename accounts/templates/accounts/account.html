@@ -19,8 +19,7 @@
     </div>
     <hr>
     <div class="row mt-4">
-        <div class="d-flex justify-content-center col">
-            <div class="col-12 col-lg-6 px-3">
+            <div class="col-12 col-lg-6 px-3 mb-4">
                 <p>Address</p>
                 <form class="mt-3" action="{% url 'account' %}" method="POST">
                     {% csrf_token %}
@@ -57,7 +56,6 @@
                     </table>
                 </div>
             </div>
-        </div>
     </div>
     {% else %}
     <div class="row"></div>

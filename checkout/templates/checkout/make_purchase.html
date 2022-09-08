@@ -106,12 +106,13 @@
                         <p class="mb-2">Total</p>
                         <p class="mb-2">€{{ total_cost }}</p>
                       </div>
-
-                      <button type="submit" class="btn btn-info btn-block btn-lg">
+                      {% if from_account %}
+                      <a href="{% url 'account' %}" class="btn btn-info btn-block btn-lg">
                         <div class="d-flex justify-content-between">
-                          <span>Make Purchase<i class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                          <span><i class="fas fa-long-arrow-alt-left me-2"></i>Back to my account</span>
                         </div>
-                      </button>
+                      </a>
+                      {% endif %}
                     </form>
 
                   </div>
