@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'basket',
     'checkout',
     'accounts',
+    'the_winery_gazette',
 
     # Other
     'django_countries',
