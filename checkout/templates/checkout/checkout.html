@@ -8,14 +8,11 @@
       <div class="col">
         <div class="card">
           <div class="card-body p-4">
-
             <div class="row">
-
               <div class="col-lg-7">
                 <h5 class="mb-3"><a href="{% url 'basket' %}" class="text-body"><i
                       class="fas fa-long-arrow-alt-left me-2"></i>Go Back</a></h5>
                 <hr>
-
                 <div class="d-flex justify-content-between align-items-center mb-4">
                   <div>
                     <p class="mb-1 text-body">You are purchasing:</p>
@@ -78,7 +75,8 @@
                       {% endfor %}
                       <div class="form-check form-check-inline mt-2">
                         {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-save-info">Save this information for my future orders</label>
+                        <label class="form-check-label" for="id-save-info">Save this information for my future
+                          orders</label>
                         <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
                           checked>
                         {% else %}
@@ -96,7 +94,7 @@
 
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                    </fieldset>
+                      </fieldset>
 
                       <!-- <div class="form-outline form-white mb-4 mt-4">
                         <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
@@ -157,8 +155,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

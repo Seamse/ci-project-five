@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.conf import settings
 from . import forms
-import os 
+import os
 
 import stripe
 
@@ -12,6 +12,8 @@ if os.path.isfile('env.py'):
 stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
 
 # Create your views here.
+
+
 def checkout(request):
     """ A view to render the page where personal details can be filled out """
 

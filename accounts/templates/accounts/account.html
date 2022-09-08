@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    {% if user.is_authenticated %}
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4 fancy-text">{{ user.username }}'s Winery account</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="d-flex justify-content-center col">
+            <a href="{% url 'account_logout' %}" class="btn btn-lg btn-dark text-white">Logout</a>
+        </div>
+    </div>
+    {% else %}
+    <div class="row"></div>
+    <div class="col">
+        <hr>
+        <h2 class="logo-font mb-4">Welcome to the accounts page! Kindly:</h2>
+        <hr>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col">
+        <a href="{% url 'account_login' %}" class="btn btn-lg btn-dark text-white">Login to my Winery account</a>
+    </div>
+    <div class="col">
+        <a href="{% url 'account_signup' %}" class="btn btn-lg btn-dark text-white">Create a Winery account</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

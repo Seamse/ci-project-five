@@ -49,9 +49,11 @@ INSTALLED_APPS = [
     'products',
     'basket',
     'checkout',
+    'accounts',
 
     # Other
     'django_countries',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +67,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'the_winery.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {

@@ -1,1 +1,20 @@
 {% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="card bg-dark">
+                <div class="card-body p-4">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-7">
+                            <div class="allauth-form-inner-content">
+                                {% block inner_content %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}
