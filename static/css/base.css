@@ -44,6 +44,15 @@ body {
   width: auto;
 }
 
+footer>a {
+  font-size: 2rem;
+  color: #1D7650 !important;
+}
+
+footer>a:hover {
+  color: #66575d !important;
+}
+
 /* Remove styling from standard form and add new
   -------------------------------------------------- */
 

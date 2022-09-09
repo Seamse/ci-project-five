@@ -9,7 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description"
+        content="This wine shop both sells and blogs about wine. The ultimate website for the true wine lover.">
+    <meta name="keywords" content="quality wine, buy wine online, wine shop, best wine, wine store,
+                fine wine good spirits, buy the right wine, wine lovers, where to buy the best wines,
+                where to buy quality wine and champagne, have wine delivered to your home, fine wine,
+                gifts for wine lovers, wine bestsellers, winery near me, the winery, wine store near me" />
     {% endblock %}
 
     {% block corecss %}
@@ -45,11 +50,12 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom fancy-text">
-            
+
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">THE WINERY</a>
-                <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse order-3" id="navbarCollapse">
@@ -70,7 +76,8 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search" method="GET" action="{% url 'products' %}">
-                        <input class="form-control me-1" type="search" name="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-1" type="search" name="search" placeholder="Search"
+                            aria-label="Search">
                         <button class="btn btn-dark" type="submit"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
@@ -88,12 +95,6 @@
 
     {% block content %}
     {% endblock %}
-
-    <!-- FOOTER -->
-    <!-- <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-    </footer> -->
 
     {% block postloadjs %}
     {% endblock %}
