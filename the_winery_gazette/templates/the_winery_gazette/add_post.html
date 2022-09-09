@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<div class="container d-flex justify-content-center align-items-center h-100">
+	<div class="card text-black col-md-6 mb-4 mt-3">
+		<div class="card-body">
+			<h3 class="text-center">Add new Post</h3>
+			<form action="" method="POST">
+				{% csrf_token %}
+				{{ form | crispy }}
+				{% if error %}
+					<strong style="color:red;">{{ error }}</strong>
+				{% endif %}
+				<input type="submit" value="Save Changes" class="btn btn-dark mt-3">
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

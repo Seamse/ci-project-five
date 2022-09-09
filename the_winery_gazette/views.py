@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, PostArticleForm
 
 
 def the_gazette(request):
@@ -45,3 +45,26 @@ def post_detail(request, slug):
     }
 
     return render(request, template_name, context)
+
+
+def add_post(request):
+    """ Add a new post to the Winery Gazette """
+    if request.method == "POST":
+        form = PostArticleForm(request.POST or None)
+        if form.is_valid():
+            new_post = form.save(commit=False)
+            new_post.title = request.POST["title"]
+            new_post.slug = request.POST["slug"]
+            new_post.image = request.POST["image"]
+            new_post.content = request.POST["content"]
+            new_post.status = request.POST["status"]
+            new_post.save()
+            return redirect(request.META.get('HTTP_REFERER'))
+        else:
+            form = PostArticleForm()
+            context = {
+                'form': form
+            }
+        return render(request,'the_winery_gazette/add_post.html', context)
+    else:
+        return redirect('home')

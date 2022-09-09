@@ -13,6 +13,11 @@
                 <hr>
             </div>
         </div>
+        {% if request.user.is_superuser %}
+        <div class="text-end">
+            <a href="{% url 'add_post' %}" class="btn btn-dark">Add Post</a>
+        </div>
+        {% endif %}
     </div>
 </div>
 
@@ -42,7 +47,7 @@
                             </a>
                             {% else %}
                             <a href="">
-                                <img class="card-img-top img-fluid gazette-image" src="{{ MEDIA_URL }}noimage.png"
+                                <img class="card-img-top img-fluid gazette-image" src="/media/no_image.jpeg"
                                     alt="{{ post.name }}">
                             </a>
                             {% endif %}
