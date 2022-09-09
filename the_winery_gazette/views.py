@@ -10,7 +10,7 @@ def the_gazette(request):
     template_name = 'the_winery_gazette/the_gazette.html'
 
     context = {
-        'posts': posts
+        'posts': posts,
     }
 
     return render(request, template_name, context)
@@ -41,7 +41,7 @@ def post_detail(request, slug):
         'post': post,
         'comments': comments,
         'new_comment': new_comment,
-        'form': form
+        'form': form,
     }
 
     return render(request, template_name, context)

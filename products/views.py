@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
-from .models import Product
-from .forms import ProductForm
+from django.db.models import Q, Avg
+from .models import Product, Review
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
@@ -48,9 +48,18 @@ def product_detail(request, product_id):
     """ A view to render a product's details on the page """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(product=product_id).order_by("-comment")
+
+    average = reviews.aggregate(Avg("rating"))["rating__avg"]
+    if average is None:
+        average = 0
+    else:
+        average = round(average, 2)
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'average': average
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -115,3 +124,73 @@ def delete_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     return redirect(reverse('products'))
+
+@login_required
+def add_review(request, product_id):
+    """ Add a review to a product """
+    if request.user.is_authenticated:
+        product = Product.objects.get(id=product_id)
+        if request.method == "POST":
+            form = ReviewForm(request.POST or None)
+            if form.is_valid():
+                new_review = form.save(commit=False)
+                new_review.comment = request.POST["comment"]
+                new_review.rating = request.POST["rating"]
+                new_review.user = request.user
+                new_review.product = product
+                new_review.save()
+                return redirect(request.META.get('HTTP_REFERER'))
+        else:
+            form = ReviewForm()
+            context = {
+                'form': form
+            }
+        return render(request,'products/products.html', context)
+    else:
+        return redirect('home')
+
+
+@login_required()
+def edit_review(request, product_id, review_id):
+    """ Edit a previously created review """
+    if request.user.is_authenticated:
+        product = Product.objects.get(id=product_id)
+        review = Review.objects.get(product=product, id=review_id)
+        if request.user == review.user:
+            if request.method == "POST":
+                form = ReviewForm(request.POST, instance=review)
+                if form.is_valid():
+                    data = form.save(commit=False)
+                    if (data.rating>5) or (data.rating<0):
+                        error="Out of range. Please select rating from 0 to 5."
+                        context = {
+                            'error': error,
+                            'form': form
+                        }
+                        return render(request, 'products/edit_review.html', context)
+                    else:
+                        data.save()
+                        return redirect(f'/products/int:{product_id}')
+            else:
+                form = ReviewForm(instance=review)
+                context = {
+                    'form': form
+                }
+            return render(request,'products/edit_review.html', context)
+        else:
+            return redirect(request.META.get('HTTP_REFERER'))
+    else:
+        return redirect('home')
+
+
+@login_required
+def delete_review(request, product_id, review_id):
+    """ Delete a previously created review """
+    if request.user.is_authenticated:
+        product = Product.objects.get(id=product_id)
+        review = Review.objects.get(product=product, id=review_id)
+        if request.user == review.user:
+            review.delete()
+        return redirect(request.META.get('HTTP_REFERER'))
+    else:
+        return redirect('home')

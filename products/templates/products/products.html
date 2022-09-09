@@ -45,12 +45,12 @@
                                     </div>
                                     <div class="row d-flex justify-content-between">
                                         <div class="col">
-                                    {% if product.rating %}
-                                    <small class="text-warning"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
-                                        5</small>
-                                    {% else %}
-                                    <small class="text-warning">No Rating</small>
-                                    {% endif %}
+                                            {% if product.rating %}
+                                            <small class="text-warning"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                                5</small>
+                                            {% else %}
+                                            <small class="text-warning">No Rating</small>
+                                            {% endif %}
                                         </div>
                                         <div class="col">
                                     {% if request.user.is_superuser %}
