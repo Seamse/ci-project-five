@@ -60,6 +60,11 @@
                         <li class="nav-item px-3">
                             <a class="nav-link" href="{% url 'products' %}">Shop</a>
                         </li>
+                        {% if request.user.is_authenticated and request.user.is_superuser %}
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="{% url 'add_product' %}">Add Product</a>
+                        </li>
+                        {% endif %}
                         <li class="nav-item px-3">
                             <a class="nav-link" href="{% url 'the_gazette' %}">The Winery Gazette</a>
                         </li>

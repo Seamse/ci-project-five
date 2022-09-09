@@ -43,12 +43,24 @@
                                         <p class="lead mb-0 text-left font-weight-bold">{{ product.country.name }},
                                             €{{ product.price }}</p>
                                     </div>
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="col">
                                     {% if product.rating %}
                                     <small class="text-warning"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
                                         5</small>
                                     {% else %}
                                     <small class="text-warning">No Rating</small>
                                     {% endif %}
+                                        </div>
+                                        <div class="col">
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a class="text-success btn btn-sm" href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a class="text-danger btn btn-sm" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                    {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
