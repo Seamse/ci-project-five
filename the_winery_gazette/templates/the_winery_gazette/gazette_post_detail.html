@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container text-center">
@@ -7,7 +8,7 @@
         <div class=" col-md-8 col-md-10 mx-auto">
             <div class="site-heading">
                 <hr>
-                <h3 class=" site-heading my-4 mt-3 text-white fancy-text">{{ object.title }}</h3>
+                <h3 class=" site-heading my-4 mt-3 text-white fancy-text">{{ post.title }}</h3>
                 <hr>
             </div>
         </div>
@@ -26,13 +27,12 @@
                     </div>
                     <div class="row d-flex justify-content-center align-items-center">
                         <div class="col-md-8">
-                            <p class="card-text text-black ">{{ object.content | safe }}</p>
+                            <p class="card-text text-black ">{{ post.content | safe }}</p>
                         </div>
                         <div class="col">
                             {% if post.image %}
                             <a href="{{ post.image.url }}" target="_blank">
-                                <img class="card-img-top img-fluid" src="{{ post.image.url }}"
-                                    alt="{{ post.name }}">
+                                <img class="card-img-top img-fluid" src="{{ post.image.url }}" alt="{{ post.name }}">
                             </a>
                             {% else %}
                             <a href="">
@@ -43,9 +43,51 @@
                         </div>
                     </div>
                     <a href="{% url 'the_gazette' %}" class="btn btn-dark"><i
-                        class="fas fa-long-arrow-alt-left me-2"></i>Go Back</a>
+                            class="fas fa-long-arrow-alt-left me-2"></i>Go Back</a>
                 </div>
             </div>
+        </div>
+
+
+        <div>
+            <h5 class="fancy-text">{{ comments.count }} comments</h5>
+        </div>
+
+        <div class="d-flex flex-column align-items-center">
+            <div class="col-md-8 card mb-4 mt-3">
+                <div class="card-body">
+                    {% for comment in comments %}
+                    <p class="card-text text-muted h6">{{ comment.author }} | {{ comment.created_on}}</p>
+                    <div class="text-black ms-4">
+                        <p>{{ comment.body | linebreaks }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% if user.is_authenticated %}
+            <div class="col-md-8 card mb-4 d-flex align-items-center">
+                <div class="card-body">
+                    {% if new_comment %}
+                    <div class="alert alert-success" role="alert">
+                        Your comment is awaiting moderation
+                    </div>
+                    {% else %}
+                    <h3>Leave a comment</h3>
+                    <form method="post">
+                        {{ form | crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-dark mt-3">Comment</button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+            {% else %}
+            <div class="col-md-8 card mb-4 d-flex align-items-center">
+                <div class="card-body">
+                    <a href="{% url 'account_login' %}" class="btn btn-sm btn-dark text-white">Login to Comment</a>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
