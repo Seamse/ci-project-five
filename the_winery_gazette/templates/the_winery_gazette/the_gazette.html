@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container text-center">
+    <div class="row">
+        <div class=" col-md-8 col-md-10 mx-auto">
+            <div class="site-heading">
+                <hr>
+                <h3 class=" site-heading my-4 mt-3 text-white fancy-text">Welcome to the Winery Gazette</h3>
+                <p class="text-light">Feel free to peruse our team's posts and latest news!</p>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        {% for post in posts %}
+        <div class="col-md-6 mt-3">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <h2 class="card-title text-black text-center fancy-text">{{ post.title }}</h2>
+                            <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col">
+                            <p class="card-text text-black">{{post.content|slice:":100" }}</p>
+                            <a href="#" class="btn btn-dark">Read More &rarr;</a>
+                        </div>
+                        <div class="col">
+                            {% if post.image %}
+                            <a href="{{ post.image.url }}" target="_blank">
+                                <img class="card-img-top img-fluid gazette-image" src="{{ post.image.url }}"
+                                    alt="{{ post.name }}">
+                            </a>
+                            {% else %}
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ post.name }}">
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -23,20 +23,18 @@ def all_products(request):
             else:
                 products = products.order_by("-rating")
 
-
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
-
 
         if 'search' in request.GET:
             query = request.GET['search']
             if not query:
                 messages.error(request, "I'm not sure what you're looking for")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products=products.filter(queries)
+            products = products.filter(queries)
 
     context = {
         'products': products,

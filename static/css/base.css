@@ -39,6 +39,11 @@ body {
   max-width: fit-content;
 }
 
+.gazette-image {
+  max-height: 25vh;
+  width: auto;
+}
+
 /* Remove styling from standard form and add new
   -------------------------------------------------- */
 
