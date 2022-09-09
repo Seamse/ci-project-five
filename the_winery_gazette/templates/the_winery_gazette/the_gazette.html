@@ -32,7 +32,7 @@
                     <div class="row d-flex justify-content-center align-items-center">
                         <div class="col">
                             <p class="card-text text-black">{{post.content|slice:":100" }}</p>
-                            <a href="#" class="btn btn-dark">Read More &rarr;</a>
+                            <a href="{% url 'gazette_post_detail' post.slug %}" class="btn btn-dark">Read More &rarr;</a>
                         </div>
                         <div class="col">
                             {% if post.image %}
@@ -42,7 +42,7 @@
                             </a>
                             {% else %}
                             <a href="">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                <img class="card-img-top img-fluid gazette-image" src="{{ MEDIA_URL }}noimage.png"
                                     alt="{{ post.name }}">
                             </a>
                             {% endif %}

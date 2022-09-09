@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="row">
+        <div class=" col-md-8 col-md-10 mx-auto">
+            <div class="site-heading">
+                <hr>
+                <h3 class=" site-heading my-4 mt-3 text-white fancy-text">{{ object.title }}</h3>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-md-8">
+                            <p class="card-text text-black ">{{ object.content | safe }}</p>
+                        </div>
+                        <div class="col">
+                            {% if post.image %}
+                            <a href="{{ post.image.url }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ post.image.url }}"
+                                    alt="{{ post.name }}">
+                            </a>
+                            {% else %}
+                            <a href="">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ post.name }}">
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
