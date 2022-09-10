@@ -212,6 +212,9 @@ CI channel lead [Daniel Callaghan](https://github.com/xiaoniuniu89)
 [Bootstrap Template for the landing page](https://getbootstrap.com/docs/5.2/examples/carousel/#)  
 [Bootstrap Template for the shopping cart](https://mdbootstrap.com/docs/standard/extended/shopping-carts/)
 
+Images not made by me were taken from:  
+[Pexels](https//:www.pexels.com)  
+
 Useful pages were:  
 [Slack](https//:www.slack.com)  
 [Stack Overflow](https://stackoverflow.com/)  
