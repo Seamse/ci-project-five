@@ -1,0 +1,1 @@
+[{"model": "accounts.useraccount", "pk": 1, "fields": {"user": 1, "default_street_address1": "Random Street 5", "default_street_address2": null, "default_town_or_city": "Barrenborough", "default_postcode": "66666", "default_country": "NZ"}}]
