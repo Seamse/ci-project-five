@@ -11,7 +11,7 @@
 ## Marketing and target audience  
 * The site is B2C, aimed at wine enthusiast of all ages but hopeful to attract a younger audience in their 20's and 30's as well.  
 * The chosen promotional platform is therefore social media, specifically Facebook.
-* A good way to keep potential users interest could be through e-mail subscription with latest news and offers.  
+* A good way to keep potential users interested could be through e-mail subscription with the latest news and offers.  
 * Keyword research was done in order to improve the website's SEO:  
 ![Keyword Research](media/keywords.jpg)  
 
@@ -209,7 +209,7 @@ The deployed version can be found here: [The Winery](https://the-winery.herokuap
 
 My mentor [5pence](https://github.com/5pence)  
 CI channel lead [Daniel Callaghan](https://github.com/xiaoniuniu89)  
-[Bootstrap Template for the landing page](https://getbootstrap.com/docs/5.2/examples/carousel/#)
+[Bootstrap Template for the landing page](https://getbootstrap.com/docs/5.2/examples/carousel/#)  
 [Bootstrap Template for the shopping cart](https://mdbootstrap.com/docs/standard/extended/shopping-carts/)
 
 Useful pages were:  
