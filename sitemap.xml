@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://the-winery.herokuapp.com/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/accounts/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/products/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/the_winery_gazette/the_gazette/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/basket/basket/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/products/?category=red_wine,white_wine,rose_wine</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/products/?category=sparkling</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/products/?category=other</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/products/?sort=price&amp;l2h</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/products/?sort=price&amp;h2l</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/products/?sort=rating</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:1/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:2/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:3/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:4/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:5/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:6/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:7/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:8/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:9/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:10/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:11/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:12/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:13/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:14/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:15/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:16/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:17/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:18/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:19/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:20/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:21/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:22/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:23/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:24/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:25/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:26/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:27/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:28/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:29/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:30/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:31/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:32/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:33/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:34/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:35/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:36/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:37/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:38/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:39/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:40/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:41/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:42/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:43/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:44/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:45/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:46/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:47/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:48/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:49/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:50/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/products/int:51/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/the_winery_gazette/why-we-support-locally/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/the_winery_gazette/the-great-champagne-houses/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/the_winery_gazette/vignerons-visit-janots-bos/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-winery.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-09-10T10:56:14+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
