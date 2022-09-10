@@ -1,108 +1,227 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Winery
+  [The Winery](https://the-winery.herokuapp.com/) is an e-commerce B2C webshop aimed at lovers of fine alcoholic beverages made with grapes.  
+  The concept is made around the idea of a small team of people (who love fine wines, champagnes etc.) who enjoy traveling in order to visit wine-farmers directly at their respective farms.  
+  They bring home the drinks they enjoy and add them to their shop to share with others who can buy and have them delivered.  
+  Their 'adventures' are chronicled in 'The Winery Gazette', a kind of blog page where they keep people updated about which wine-farmers they visited or what might be fun to visit for other wine enthusiasts out there.  
 
-Welcome Monique,
+  The website is aimed at wine enthusiasts of all ages but the addition of the blog (which provides a unique interaction with customers) is aimed at attracting younger users.  
+  The goal is not only to sell, but to enthuse people to learn more about and enjoy fine wine.  
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Marketing and target audience  
+* The site is B2C, aimed at wine enthusiast of all ages but hopeful to attract a younger audience in their 20's and 30's as well.  
+* The chosen promotional platform is therefore social media, specifically Facebook.
+* A good way to keep potential users interest could be through e-mail subscription with latest news and offers.  
+* Keyword research was done in order to improve the website's SEO:  
+![Keyword Research](media/keywords.jpg)  
 
-## Gitpod Reminders
+  
+## UX Design  
+### User stories
+##### Home
+* As a site user I want to understand the site's purpose at a glance, so there's no uncertainty that this is what I'm searching for.
+* As a site user I want the site's navigation to be easy and instinctual, so that I can find my way around easily.
+* As a site user I would like to read about what the shop stands for / what they are about so that I am aware who I am buying products from.
+* As a site user I would like to be able to access a FAQ page to see if any questions I have, have perhaps already been addressed.
+* As a site user I would like to be able to contact the webshop owner(s) in case of any questions.
+* As a site owner I would like to be able to moderate the FAQ page in order to keep it up to date.
+##### Account
+* As a site user I want to be able to create an account.
+* As a site user I want to be able to see my order/payment history.
+* As a site user I want to be able to review products in order to help others make informed decisions.
+##### Products
+* As a site user I want to be able to click on individual products for more details.
+* As a site user I want to be able to select/order products based on type or cost etc. so that it's easier to find what I'm looking for.
+* As a site owner I want to be able to add products.
+* As a site owner I want to be able to edit products.
+* As a site owner I want to be able to delete products.
+##### Basket
+* As a site user I want to be able to add items to my shopping bag, so that I can continue shopping while keeping track of what I wish to buy.
+* As a site user I want to be able to delete items from my shopping bag.
+* As a site user I want to be able to edit quantities in my shopping bag.
+* As a user I want to see a confirmation when I've added or deleted something from my bag, so that I am certain it worked as expected.
+##### Checkout
+* As a site user I want to be able to see an overview of my order before checkout.
+* As a site user I want to see the total amount before proceeding to checkout, so that I am certain what I will have to pay.
+* As a site user I want to be able to pay securely.
+* As a site user I want to receive an order confirmation after checkout.
+##### Mini Blog
+* As a site owner I want to be able to write semi-regular blog posts in order to keep customers up to date on the shop's recent exploits and keep them interested in our products.
+* As a site user I want to be able to comment on blog posts.
+* As a site owner I would like to be able to moderate the comments posted on the mini blog in order to prevent potential offense language or abuse.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Site goals
+* The site is first and foremost a webshop which aims to sell products to its users.
+* As a secondary goal the site hopes to entertain and enthuse people for the world of wine beyond their local supermarket.
 
-`python3 -m http.server`
+## Features  
+### Existing features
+*  The landing page:  
+![Landing Page](media/landing_page.jpg)  
 
-A blue button should appear to click: _Make Public_,
+* For those who seek to buy we have the shopping page:   
+![Shop](media/shop_image.jpg)  
 
-Another blue button should appear to click: _Open Browser_.
+* The site visitor can look at each individual product in detail:  
+![Product Detail](media/product_detail_image.jpg)  
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* When a specific bottle catches their eye site visitors can add it to their shopping basket:  
+![Basket](media/shopping_basket.jpg)  
 
-A blue button should appear to click: _Make Public_,
+* And finally we have The Winery Gazette for overall entertainment:  
+![The Winery Gazette](media/the_winery_gazette_image.jpg)  
 
-Another blue button should appear to click: _Open Browser_.
+### Potential future features  
+##### As, due to time constrictions, not all elements of the website are functional yet, there are quite a few things that can still be implemented:
+* Though site users (who are logged in) can actively review and rate products. Their average ratings only show on the product detail page at this time.  
+  The rating visible in the main shop is still a mock-up.  
+* Reviews and blog comments can only be approved via the admin panel, not yet directly via the site.  
+* Blog posts can only be made via the admin panel, not yet directly via the site.  
+* Perhaps video footage could be added to the blog for more interactivity.  
+* Overall UX and user friendliness could be improved with for example succes and error messages.  
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Technologies used  
+* Python3
+* HTML
+* CSS
+* [Django](https://www.djangoproject.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [GitHub](https://www.github.com)
+* [Gitpod](https://www.gitpod.io)
+* [Heroku](https://www.heroku.com)  
 
-To log into the Heroku toolbelt CLI:
+## Testing  
+I have manually tested this project by doing the following:  
+* Passed the code through a [Pep8](http://pep8online.com/) linter and confirmed there are no problems.
+* Roam around the site both logged in and logged out to test all current functionality.
+* Pass the lighthouse test in developer tools for the biggest pages:  
+The landing page:  
+![Landing page LH test](media/landing_page_lh.jpg)  
+The shop:  
+![Shop LH test](media/shop_lh.jpg)  
+The Winery Gazette:  
+![The Winery Gazette LH test](media/the_winery_gazette_lh.jpg)  
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### User testing:
+##### Home
+* As a site user I want to understand the site's purpose at a glance, so there's no uncertainty that this is what I'm searching for:  
+The landing page immediately showcases 'wines', 'sparkling' and 'other' at the bottom of the page, the header contains the word 'shop' and has a shopping basket icon.  
+Finally the background is a vineyard. 
+* As a site user I want the site's navigation to be easy and instinctual, so that I can find my way around easily:  
+By giving clear names to everything and making many items clickable, I believe this has been achieved. Though there is always room for improvement.  
+* As a site user I would like to read about what the shop stands for / what they are about so that I am aware who I am buying products from:  
+Though there is no 'about' section, this information can be found in 'The Winery Gazette', which is also indicated in the carousel on the landing page.  
+* As a site user I would like to be able to access a FAQ page to see if any questions I have, have perhaps already been addressed:  
+This is to be a future addition, I was not able to implement this within the time limit.  
+* As a site user I would like to be able to contact the webshop owner(s) in case of any questions:  
+Site users (with an account) can interact with the webshop's team on 'The Winery Gazette' through the comments section. However, a direct contact option should be added in the future.  
+* As a site owner I would like to be able to moderate the FAQ page in order to keep it up to date:  
+This is a future addition, as the FAQ page does not exist yet.  
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+##### Account
+* As a site user I want to be able to create an account:  
+Accounts can be created.  
+* As a site user I want to be able to see my order/payment history:  
+Though a section has been made under the user account where order history can be displayed, this is not yet functional.  
+As such this will be a future addition.  
+* As a site user I want to be able to review products in order to help others make informed decisions:  
+Site users (who are logged in) can leave reviews and ratings on individual products.  
 
-------
+##### Products
+* As a site user I want to be able to click on individual products for more details:  
+Products can be viewed in more detail on the products detail page.  
+* As a site user I want to be able to select/order products based on type or cost etc. so that it's easier to find what I'm looking for:  
+The site can be ordered based on price and rating. There is still a small bug present here however, which will be expanded upon in the bugs section.  
+* As a site owner I want to be able to add products:  
+Products can be added by the super user via the website (and of course the admin panel, but that's less desirable).  
+* As a site owner I want to be able to edit products:  
+Products can be edited by the super user via the website.  
+* As a site owner I want to be able to delete products:  
+Products can be deleted by the super user via the website.  
 
-## Release History
+##### Basket
+* As a site user I want to be able to add items to my shopping bag, so that I can continue shopping while keeping track of what I wish to buy:  
+Items can be added to the shopping bag and, though there is no major notification, users can see an icon appear over the basket indicating how many items they currently have inside the basket.  
+* As a site user I want to be able to delete items from my shopping bag:  
+Items can be deleted from the shopping bag.  
+* As a site user I want to be able to edit quantities in my shopping bag:  
+Editing quantities inside the basket is not yet possible. This is a future addition.  
+* As a user I want to see a confirmation when I've added or deleted something from my bag, so that I am certain it worked as expected:  
+Confirmations are a future addition. The icon over the basket does change when an item is added however.  
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+##### Checkout
+* As a site user I want to be able to see an overview of my order before checkout:  
+An order summary is visible on the left of the checkout area.  
+* As a site user I want to see the total amount before proceeding to checkout, so that I am certain what I will have to pay:  
+The total amount to be paid is calculated and displayed on the right of the checkout area.  
+* As a site user I want to be able to pay securely:  
+Unfortunately Stripe was not agreeing with me and this user story is as of yet unfinished. This will be fully implemented in future.  
+* As a site user I want to receive an order confirmation after checkout.  
+As the payment does not yet function as it should, orders cannot yet be finalized and order confirmations are therefor not yet sent. This too is a future addition.  
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+##### Mini Blog
+* As a site owner I want to be able to write semi-regular blog posts in order to keep customers up to date on the shop's recent exploits and keep them interested in our products:  
+The Winery Gazette is created and several posts are displayed as an example. New posts can not yet be added from the website directly however. This will be added in future.  
+* As a site user I want to be able to comment on blog posts:  
+Logged in users can comment on the blog posts.  
+* As a site owner I would like to be able to moderate the comments posted on the mini blog in order to prevent potential offense language or abuse:  
+Comments have to be approved before they are displayed. This still has to be done form inside the admin panel however, direct moderation from the website will be a future addition.  
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Bugs 
+Some of the more prominent bugs were: 
+* Solved bugs  
+  * Image overlay on an svg circle:  
+  The circles on the bootstrap template remained grey no matter what I tried. This was fixed with the help of [Stackoverflow](https://stackoverflow.com/questions/30897108/how-can-i-display-an-image-inside-svg-circle-in-html5)  
+  * Basket moved below the toggled navbar in mobile view:  
+  This was fixed with the help of [Stackoverflow](https://stackoverflow.com/questions/53695359/collapsing-navbar-moves-uncollapsable-items-away-from-navbar)  
+  * Deleting items from shopping cart was done using pop, which caused the interesting effect of adding back in the previously deleted product when more than one item was deleted in a row.  
+  This was fixed by saving the session again after popping, so it wouldn't reset back to the previous one.  
+  
+* Unsolved bugs  
+  * Sorting works as expected in the shop directly. However when going to the shop through one of the bottom landing page links (wines, sparkling or other), the sort button will cause all products to appear on the page again, rather than only sorting the selection.  
+  This still has to be fixed in future.  
+  * Rating on the products page is still a mock-up, rather than the actual customer rating which is visible on the product detail page.  
+  * Payment functionality is still bugging and needs to be fixed in future.  
+  * Though the add post button has been added to the Winery Gazette page for super users, it currently leads to a 404 error page.  
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Deployment
+This project was deployed using Code Institute's mock terminal for Heroku.  
+* Steps for deployment:
+   * Sign into Heroku
+   * Choose New.
+   * Choose Create new app.
+   * Type in a name for your new app.
+   * Select your region from the dropdown menu.
+   * Choose Create App.
+   * In the settings tab choose config vars.
+   * Add the key: PORT with value: 8000.
+   * Link up Heroku Postgres.
+   * In the deploy tab, select GitHub as the deployment method and connect your GitHub profile.
+   * Search for the repository that you wish to deploy to Heroku and click "connect".
+   * Choose to automatically deploy and update your app.
+   * Click on Deploy
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+The deployed version can be found here: [The Winery](https://the-winery.herokuapp.com/)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Credits
+[Code Institute](https://www.codeinstitute.net)  
+[Code Institute's Boutique Ado Project](https://github.com/Seamse/boutique-ado)  
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+My mentor [5pence](https://github.com/5pence)  
+CI channel lead [Daniel Callaghan](https://github.com/xiaoniuniu89)  
+[Bootstrap Template for the landing page](https://getbootstrap.com/docs/5.2/examples/carousel/#)
+[Bootstrap Template for the shopping cart](https://mdbootstrap.com/docs/standard/extended/shopping-carts/)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Useful pages were:  
+[Slack](https//:www.slack.com)  
+[Stack Overflow](https://stackoverflow.com/)  
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+Specifically used pages:  
+[CSS tricks shapes and images](https://css-tricks.com/the-many-ways-to-link-up-shapes-and-images-with-html-and-css/#:~:text=The%20simplest%20way%20to%20make,SVG%20elements%20or%20just%20one.)  
+[CSS tricks text on background visibilty](https://css-tricks.com/design-considerations-text-images/)  
+[Stack Overflow basket icon counter](https://stackoverflow.com/questions/51304169/how-to-put-the-number-at-top-right-corner-of-cart-icon)  
+[Stack Overflow Max date on vintage option](https://stackoverflow.com/questions/49051017/year-field-in-django)  
+[Hubspot dropdown button](https://blog.hubspot.com/website/html-dropdown)  
+[Djangocentral blog](https://djangocentral.com/building-a-blog-application-with-django/)  
+[Djangocentral blog comments](https://djangocentral.com/creating-comments-system-with-django/)  
+[Github product reviewing](https://github.com/ksudarshan26/Product-Review-and-Rating-using-Django-Frameworks)  
