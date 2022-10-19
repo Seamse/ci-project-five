@@ -36,7 +36,8 @@
                     <div class="row d-flex justify-content-center align-items-center">
                         <div class="col">
                             <p class="card-text text-black">{{post.content|slice:":100" }}</p>
-                            <a href="{% url 'gazette_post_detail' post.slug %}" class="btn btn-dark">Read More &rarr;</a>
+                            <a href="{% url 'gazette_post_detail' post.slug %}" class="btn btn-dark">Read More
+                                &rarr;</a>
                         </div>
                         <div class="col">
                             {% if post.image %}

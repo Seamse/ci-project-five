@@ -125,6 +125,7 @@ def delete_product(request, product_id):
     product.delete()
     return redirect(reverse('products'))
 
+
 @login_required
 def add_review(request, product_id):
     """ Add a review to a product """
@@ -145,7 +146,7 @@ def add_review(request, product_id):
             context = {
                 'form': form
             }
-        return render(request,'products/products.html', context)
+        return render(request, 'products/products.html', context)
     else:
         return redirect('home')
 
@@ -161,8 +162,8 @@ def edit_review(request, product_id, review_id):
                 form = ReviewForm(request.POST, instance=review)
                 if form.is_valid():
                     data = form.save(commit=False)
-                    if (data.rating>5) or (data.rating<0):
-                        error="Out of range. Please select rating from 0 to 5."
+                    if (data.rating > 5) or (data.rating < 0):
+                        error = "Out of range. Please select rating from 0 to 5."
                         context = {
                             'error': error,
                             'form': form
@@ -176,7 +177,7 @@ def edit_review(request, product_id, review_id):
                 context = {
                     'form': form
                 }
-            return render(request,'products/edit_review.html', context)
+            return render(request, 'products/edit_review.html', context)
         else:
             return redirect(request.META.get('HTTP_REFERER'))
     else:

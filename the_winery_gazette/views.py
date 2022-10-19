@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
 from .forms import CommentForm, PostArticleForm
 
@@ -65,6 +65,6 @@ def add_post(request):
             context = {
                 'form': form
             }
-        return render(request,'the_winery_gazette/add_post.html', context)
+        return render(request, 'the_winery_gazette/add_post.html', context)
     else:
         return redirect('home')

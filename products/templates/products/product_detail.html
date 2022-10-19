@@ -17,8 +17,8 @@
                 </a>
                 {% else %}
                 <a href="">
-                    <img class="card-img-top img-fluid rounded-circle" src="https://the-winery.s3.amazonaws.com/media/no_image.jpeg"
-                        alt="{{ product.name }}">
+                    <img class="card-img-top img-fluid rounded-circle"
+                        src="https://the-winery.s3.amazonaws.com/media/no_image.jpeg" alt="{{ product.name }}">
                 </a>
                 {% endif %}
             </div>
@@ -73,54 +73,54 @@
     <h3 class="fancy-text text-center">Reviews</h3>
 </div>
 <div class="d-flex flex-column align-items-center">
-<div class="card text-black col-md-6 mb-4 mt-3">
-    <div class="card-body">
-        <form action="{% url 'add_review' product.id %}" method="POST">
-            {% csrf_token %}
-            <label for="comment">Write a Review</label>
-            <textarea name="comment" id="comment" cols="30" rows="5" class="form-control"></textarea>
-            <label for="rating">Rating</label>
-            <input type="range" id="rangeInput" name="rating" min="0" max="5" value="0" step="0.1"
-                oninput="amount.value=rangeInput.value">
-            <output name="amount" id="amount" for="rangeInput">0</output>
-            <br>
-            <input type="submit" class="btn btn-dark" value="Add Review">
-        </form>
+    <div class="card text-black col-md-6 mb-4 mt-3">
+        <div class="card-body">
+            <form action="{% url 'add_review' product.id %}" method="POST">
+                {% csrf_token %}
+                <label for="comment">Write a Review</label>
+                <textarea name="comment" id="comment" cols="30" rows="5" class="form-control"></textarea>
+                <label for="rating">Rating</label>
+                <input type="range" id="rangeInput" name="rating" min="0" max="5" value="0" step="0.1"
+                    oninput="amount.value=rangeInput.value">
+                <output name="amount" id="amount" for="rangeInput">0</output>
+                <br>
+                <input type="submit" class="btn btn-dark" value="Add Review">
+            </form>
+        </div>
     </div>
-</div>
-<br>
-<div class="card bg-dark col-md-4">
-    <div class="card-body">
-        {% for review in reviews %}
-        <div class="row">
-            <div class="col-md-3">
-                <h5 class="text-muted">{{ review.user.username }}</h5>
-                {% if review.rating %}
-                <small class="text-warning"><i class="fas fa-star mr-1"></i>{{ review.rating }} / 5</small>
-                {% else %}
-                <small class="text-warning"><i class="fas fa-star mr-1"></i>No Rating</small>
-                {% endif %}
+    <br>
+    <div class="card bg-dark col-md-4">
+        <div class="card-body">
+            {% for review in reviews %}
+            <div class="row">
+                <div class="col-md-3">
+                    <h5 class="text-muted">{{ review.user.username }}</h5>
+                    {% if review.rating %}
+                    <small class="text-warning"><i class="fas fa-star mr-1"></i>{{ review.rating }} / 5</small>
+                    {% else %}
+                    <small class="text-warning"><i class="fas fa-star mr-1"></i>No Rating</small>
+                    {% endif %}
                 </div>
-            <div class="col-md-9">
-                <p>{{ review.comment }}</p>
+                <div class="col-md-9">
+                    <p>{{ review.comment }}</p>
+                </div>
             </div>
-        </div>
-        <div class="row text-end">
-            <div class="col">
+            <div class="row text-end">
+                <div class="col">
+                </div>
+                <div class="col">
+                    {% if request.user == review.user %}
+                    <small class="ml-3">
+                        <a class="text-success btn btn-sm btn-dark"
+                            href="{% url 'edit_review' product.id review.id %}">Edit</a> |
+                        <a class="text-danger btn btn-sm btn-dark" href="{% url 'delete_review' product.id review.id %}"
+                            onclick="return confirm('Are you sure want to delete your review?');">Delete</a>
+                    </small>
+                </div>
+                {% endif %}
             </div>
-            <div class="col">
-        {% if request.user == review.user %}
-        <small class="ml-3">
-            <a class="text-success btn btn-sm btn-dark"
-                href="{% url 'edit_review' product.id review.id %}">Edit</a> |
-            <a class="text-danger btn btn-sm btn-dark"
-                href="{% url 'delete_review' product.id review.id %}" onclick="return confirm('Are you sure want to delete your review?');">Delete</a>
-        </small>
+            {% endfor %}
         </div>
-        {% endif %}
-        </div>
-        {% endfor %}
     </div>
-</div>
 </div>
 {% endblock %}

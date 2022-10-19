@@ -95,14 +95,14 @@ footer>a:hover {
 }
 
 .fieldset-label {
-    position: relative;
-    right: .5rem;
+  position: relative;
+  right: .5rem;
 }
 
 #payment-form .form-control,
 #card-element {
-    color: #fff;
-    border: 1px solid #292b2c;
+  color: #fff;
+  border: 1px solid #292b2c;
 }
 
 /* Navbar Basket icon show product count
@@ -120,42 +120,47 @@ footer>a:hover {
 .badge-warning[href] {
   background-color: #c67605;
 }
+
 #lblCartCount {
-    font-size: 12px;
-    background: #292b2c;
-    color: #fff;
-    padding: 0 5px;
-    vertical-align: top;
-    margin-left: -10px; 
+  font-size: 12px;
+  background: #292b2c;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
 }
 
 /* Product page Dropdown menu
   -------------------------------------------------- */
-  .dropdown {
-    display: inline-block;
-    position: relative;
-    z-index: 2;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    width: fit-content;
-    overflow: auto;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .dropdown-content a {
-    display: block;
-    color: #fff;
-    padding: 5px;
-    text-decoration: none;
-  }
-  .dropdown-content a:hover {
-    color: #FFFFFF;
-    background-color: #292b2c;
-  }
+.dropdown {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: fit-content;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #292b2c;
+}
 
 
 /* THE CAROUSEL
