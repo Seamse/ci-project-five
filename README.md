@@ -79,7 +79,7 @@
 * Reviews and blog comments can only be approved via the admin panel, not yet directly via the site.  
 * Blog posts can only be made via the admin panel, not yet directly via the site.  
 * Perhaps video footage could be added to the blog for more interactivity.  
-* Overall UX and user friendliness could be improved with for example succes and error messages.  
+* Overall UX and user friendliness could be improved with for example success and error messages.  
 
 ## Technologies used  
 * Python3
@@ -156,9 +156,9 @@ An order summary is visible on the left of the checkout area.
 * As a site user I want to see the total amount before proceeding to checkout, so that I am certain what I will have to pay:  
 The total amount to be paid is calculated and displayed on the right of the checkout area.  
 * As a site user I want to be able to pay securely:  
-Unfortunately Stripe was not agreeing with me and this user story is as of yet unfinished. This will be fully implemented in future.  
+Using stripe's 4242 card you can see that payment now passes through succesfully.  
 * As a site user I want to receive an order confirmation after checkout.  
-As the payment does not yet function as it should, orders cannot yet be finalized and order confirmations are therefor not yet sent. This too is a future addition.  
+Though users receive a success message on the website, email confirmation is not yet functional. This is a future addition.    
 
 ##### Mini Blog
 * As a site owner I want to be able to write semi-regular blog posts in order to keep customers up to date on the shop's recent exploits and keep them interested in our products:  
@@ -166,7 +166,7 @@ The Winery Gazette is created and several posts are displayed as an example. New
 * As a site user I want to be able to comment on blog posts:  
 Logged in users can comment on the blog posts.  
 * As a site owner I would like to be able to moderate the comments posted on the mini blog in order to prevent potential offense language or abuse:  
-Comments have to be approved before they are displayed. This still has to be done form inside the admin panel however, direct moderation from the website will be a future addition.  
+Comments have to be approved before they are displayed. This still has to be done from inside the admin panel however, direct moderation from the website will be a future addition.  
 
 ### Bugs 
 Some of the more prominent bugs were: 
@@ -181,8 +181,7 @@ Some of the more prominent bugs were:
 * Unsolved bugs  
   * Sorting works as expected in the shop directly. However when going to the shop through one of the bottom landing page links (wines, sparkling or other), the sort button will cause all products to appear on the page again, rather than only sorting the selection.  
   This still has to be fixed in future.  
-  * Rating on the products page is still a mock-up, rather than the actual customer rating which is visible on the product detail page.  
-  * Payment functionality is still bugging and needs to be fixed in future.  
+  * Rating on the products page is still a mock-up, rather than the actual customer rating which is visible on the product detail page.    
   * Though the add post button has been added to the Winery Gazette page for super users, it currently leads to a 404 error page.  
 
 ## Deployment
