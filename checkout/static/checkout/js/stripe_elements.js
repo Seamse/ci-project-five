@@ -5,8 +5,7 @@
     https://stripe.com/docs/stripe-js
 */
 
-// var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
-const stripePublicKey = document.querySelector('#spk').getAttribute('data-spk')
+var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
@@ -59,10 +58,11 @@ form.addEventListener('submit', function(ev) {
     // From using {% csrf_token %} in the form
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
-        'csrfmiddlewaretoken': csrfToken,
         'client_secret': clientSecret,
+        'csrfmiddlewaretoken': csrfToken,
         'save_info': saveInfo,
     };
+    console.log(postData)
     var url = '/checkout/cache_checkout_data/';
 
     $.post(url, postData).done(function () {
@@ -70,8 +70,9 @@ form.addEventListener('submit', function(ev) {
             payment_method: {
                 card: card,
                 billing_details: {
-                    first_name: $.trim(form.first_name.value),
-                    last_name: $.trim(form.last_name.value),
+                    name: $.trim(form.first_name.value, form.last_name.value),
+                    // first_name: $.trim(form.first_name.value),
+                    // last_name: $.trim(form.last_name.value),
                     email: $.trim(form.email.value),
                     address:{
                         line1: $.trim(form.street_address1.value),

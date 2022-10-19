@@ -61,7 +61,7 @@
                       <h4 class="mb-0">Please fill out your details</h4>
                     </div>
 
-                    <form class="mt-4" action="#" method="POST" id="payment-form">
+                    <form class="mt-4" method="POST" id="payment-form">
                       {% csrf_token %}
                       {% for field in form %}
                       <div class="form-outline form-white mb-1">
@@ -89,9 +89,10 @@
                         <legend class="fieldset-label mt-4 w-auto">Payment information</legend>
                         <!-- A Stripe card element will go here -->
                         <div class="mb-3" id="card-element"></div>
-
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <!-- Pass the client secret to the view so we can get the payment intent id -->
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
                       </fieldset>
 
                       <hr class="my-4">
@@ -127,7 +128,6 @@
     </div>
   </div>
 </section>
-<input id="spk" type="text" hidden data-spk="{{S_P_K}}">
 
 {% endblock %}
 
