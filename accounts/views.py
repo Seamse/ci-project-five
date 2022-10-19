@@ -39,3 +39,12 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def management(request):
+    """ Display management panel. """
+    template = 'accounts/management.html'
+
+    my_account = get_object_or_404(UserAccount, user=request.user)
+
+    return render(request, template)

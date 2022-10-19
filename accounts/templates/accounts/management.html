@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container text-center">
+    {% if user.is_authenticated and user.is_staff %}
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4 fancy-text">Welcome to management {{ user.username }}</h2>
+            
+        </div>
+    </div>
+    <hr>
+    <div class="row mt-4">
+        <div class="col-12 col-lg-6 px-3 mb-4">
+            <a href="{% url 'add_product' %}" class="btn btn-lg btn-dark text-white">Add new product</a>
+        </div>
+        <div class="col-12 col-lg-4 px-3">
+            <a href="#" class="btn btn-lg btn-dark text-white">Moderate reviews</a>
+        </div>
+    </div>
+    {% else %}
+    <div class="row"></div>
+    <div class="col">
+        <hr>
+        <h2 class="logo-font mb-4">I'm sorry, you're not authorized to access this page.</h2>
+        <hr>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-lg btn-dark text-white">Main page</a>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

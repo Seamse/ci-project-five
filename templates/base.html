@@ -68,7 +68,7 @@
                         </li>
                         {% if request.user.is_authenticated and request.user.is_superuser %}
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="{% url 'add_product' %}">Add Product</a>
+                            <a class="nav-link" href="{% url 'management' %}">Management</a>
                         </li>
                         {% endif %}
                         <li class="nav-item px-3">
