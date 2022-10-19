@@ -27,7 +27,7 @@ def post_detail(request, slug):
     if request.method == 'POST':
         form = CommentForm(data=request.POST)
         if form.is_valid():
-
+            form.instance.author = request.user
             # Create Comment object but don't save to database yet
             new_comment = form.save(commit=False)
             # Assign the current post to the comment
