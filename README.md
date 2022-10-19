@@ -10,7 +10,8 @@
 
 ## Marketing and target audience  
 * The site is B2C, aimed at wine enthusiast of all ages but hopeful to attract a younger audience in their 20's and 30's as well.  
-* The chosen promotional platform is therefore social media, specifically Facebook.
+* The chosen promotional platform is therefore social media, specifically Facebook.  
+![Facebook example business page](media/FB-page.jpg)  
 * A good way to keep potential users interested could be through e-mail subscription with the latest news and offers.  
 * Keyword research was done in order to improve the website's SEO:  
 ![Keyword Research](media/keywords.jpg)  
