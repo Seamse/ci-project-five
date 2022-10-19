@@ -51,7 +51,7 @@ form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
-    $('#payment-form').fadeToggle(100);
+    $('#payment-form').fadeToggle(100);6+230
     $('#loading-overlay').fadeToggle(100);
 
     var saveInfo = Boolean($('#id-save-info').attr('checked'));
@@ -71,8 +71,6 @@ form.addEventListener('submit', function(ev) {
                 card: card,
                 billing_details: {
                     name: $.trim(form.first_name.value, form.last_name.value),
-                    // first_name: $.trim(form.first_name.value),
-                    // last_name: $.trim(form.last_name.value),
                     email: $.trim(form.email.value),
                     address:{
                         line1: $.trim(form.street_address1.value),
@@ -94,7 +92,17 @@ form.addEventListener('submit', function(ev) {
             },
         }).then(function(result) {
             if (result.error) {
-                print(result.error.message);
+                var errorDiv = document.getElementById('card-errors');
+                var html = `
+                    <span class="icon" role="alert">
+                    <i class="fas fa-times"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
+                $(errorDiv).html(html);
+                $('#payment-form').fadeToggle(100);
+                // $('#loading-overlay').fadeToggle(100);
+                card.update({ 'disabled': false});
+                $('#submit-button').attr('disabled', false);
             } else {
                 if (result.paymentIntent.status === 'succeeded') {
                     form.submit();

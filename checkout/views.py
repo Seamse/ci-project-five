@@ -53,7 +53,6 @@ def checkout(request):
         form = forms.CheckoutForm(form_data)
         if form.is_valid():
             order = form.save(commit=False)
-            print(request.POST)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
