@@ -51,8 +51,9 @@ class NewOrder(models.Model):
         if self.order_total > settings.FREE_DELIVERY_FROM:
             self.delivery_cost = 0
         else:
-            self.delivery_cost = settings.FREE_DELIVERY_FROM
+            self.delivery_cost = settings.STANDARD_DELIVERY
         self.total_cost = self.order_total + self.delivery_cost
+        print(self.total_cost)
         self.save()
 
     def save(self, *args, **kwargs):
