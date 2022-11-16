@@ -53,7 +53,6 @@ class NewOrder(models.Model):
         else:
             self.delivery_cost = settings.STANDARD_DELIVERY
         self.total_cost = self.order_total + self.delivery_cost
-        print(self.total_cost)
         self.save()
 
     def save(self, *args, **kwargs):
