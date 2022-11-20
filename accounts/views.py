@@ -11,7 +11,7 @@ def personal_account(request):
     if request.user.is_authenticated:
         my_account = get_object_or_404(UserAccount, user=request.user)
         form = UserAccountForm(instance=my_account)
-        previous_orders = my_account.orders.all()
+        orders = my_account.orders.all()
 
         if request.method == 'POST':
             form = UserAccountForm(request.POST, instance=my_account)
@@ -20,7 +20,7 @@ def personal_account(request):
 
         context = {
             'form': form,
-            'previous_orders': previous_orders,
+            'orders': orders,
         }
 
         return render(request, template, context)
@@ -32,7 +32,7 @@ def order_history(request, order_number):
     """ Create order history """
     order = get_object_or_404(NewOrder, order_number=order_number)
 
-    template = 'checkout/make_purchase.html'
+    template = 'accounts/order_history.html'
     context = {
         'order': order,
         'from_account': True,

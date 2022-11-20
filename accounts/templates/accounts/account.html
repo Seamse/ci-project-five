@@ -29,7 +29,7 @@
         </div>
         <div class="col-12 col-lg-6 px-3">
             <p>Order History</p>
-            <div class="order-history table-responsive">
+            <div class="order-history table-responsive small">
                 <table class="table table-sm table-borderless text-white">
                     <thead>
                         <tr>
@@ -48,7 +48,14 @@
                                 </a>
                             </td>
                             <td>{{ order.date }}</td>
-                            <td>${{ order.total_cost }}</td>
+                            <td>
+                                <ul class="list-unstyled">
+                                    {% for item in order.lineitems.all %}
+                                    <li>{{ item.product.name }} x {{ item.quantity }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>€{{ order.total_cost }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

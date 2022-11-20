@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="h-100 h-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <h5 class="mb-3"><a href="{% url 'account' %}" class="text-body"><i
+                                            class="fas fa-long-arrow-alt-left me-2"></i>Back to my account</a></h5>
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div>
+                                        <p class="mb-1 text-body">Your order details regarding order:
+                                            {{ order.order_number }}</p>
+                                        <p class="mb-1 text-body">This order was placed on: {{ order.date }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3">
+                                    {% for item in order.lineitems.all %}
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <div>
+                                                    {% if item.product.image %}
+                                                    <img src="{{ item.product.image.url }}" class="img-fluid rounded-3"
+                                                        alt="Shopping item" style="width: 65px;">
+                                                    {% else %}
+                                                    <img src="https://the-winery.s3.amazonaws.com/media/no_image.jpeg"
+                                                        class="img-fluid rounded-3" alt="Shopping item"
+                                                        style="width: 65px;">
+                                                    {% endif %}
+                                                </div>
+                                                <div class="ms-3 text-dark">
+                                                    <h5>{{ item.product.name }}</h5>
+                                                    <p class="small mb-0">{{ item.product.vintage }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row align-items-center text-dark">
+                                                <div style="width: 50px;">
+                                                    <h5 class="fw-normal mb-0">{{ item.quantity }}</h5>
+                                                </div>
+                                                <div style="width: 80px;">
+                                                    <h5 class="mb-0">€{{ item.product.price }}</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

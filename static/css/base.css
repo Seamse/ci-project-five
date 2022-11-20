@@ -71,6 +71,15 @@ footer>a:hover {
   color: #fff;
 }
 
+/* Accounts page
+  -------------------------------------------------- */
+
+.order-history {
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #292b2c;
+}
+
 /* Stripe
   -------------------------------------------------- */
 
