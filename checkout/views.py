@@ -2,7 +2,10 @@ import json
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.conf import settings
+from django.template.loader import get_template
+from django.core.mail import EmailMultiAlternatives
 from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
 import stripe
 from products.models import Product
 from basket.contexts import basket_contents
@@ -152,3 +155,51 @@ def make_purchase(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def payment_confirmation(data):
+    """ post webhook payment confirmation view """
+    # find order and update payment to True
+    NewOrder.objects.filter(order_key=data).update(billing_status=True)
+    # find order items and send confirmation email containing links
+    order = NewOrder.objects.get(order_key=data)
+    order_items = OrderLineItem.objects.filter(order=order)
+    order_items_url = [item.product.pdf.url for item in order_items]
+    subject = 'Your The Winery Order'
+    from_email = settings.EMAIL_HOST_USER
+    to = order.email
+    text_message = f'''
+        Hi there, {order.first_name}. Your payment was successful.
+        Here are the details of your order,{"".join(order_items_url)}'''
+    html_message = get_template(("email.html")).render({
+        'order': order,
+        'order_items': order_items
+    })
+    message = EmailMultiAlternatives(subject, text_message, from_email, [to])
+    message.attach_alternative(html_message, "text/html")
+    message.send()
+
+
+@csrf_exempt
+def stripe_webhook(request):
+    """listens for payment_intent.succeeded"""
+    payload = request.body
+    stripe.api_key = settings.STRIPE_SECRET_KEY
+    event = None
+
+    try:
+        event = stripe.Event.construct_from(
+            json.loads(payload), stripe.api_key
+        )
+    except ValueError as e:
+        print(e)
+        return HttpResponse(status=400)
+
+    # Handle the event
+    if event.type == 'payment_intent.succeeded':
+        payment_confirmation(event.data.object.client_secret)
+
+    else:
+        print(f'Unhandled event type {event.type}')
+
+    return HttpResponse(status=200)

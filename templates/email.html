@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Email Receipt</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style>
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td,
+        img,
+        h,
+        p {
+            margin: 0 auto;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+            width: 100%;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        .td-header-grey {
+            background-color: #eeeeee;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        @media screen and (max-width: 480px) {
+            .mobile-hide {
+                display: none !important;
+            }
+
+            .mobile-center {
+                text-align: center !important;
+            }
+
+            h1 {
+                font-size: 2rem !important;
+            }
+        }
+
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+    </style>
+
+<body style="margin: 0 !important; padding: 0 !important; background-color: #eeeeee;">
+
+    <table>
+        <tr>
+            <td style="background-color: #eeeeee;">
+
+                <table style="max-width:600px; margin: 0 auto;">
+                    <tr>
+                        <td style="font-size:0; padding: 35px; background: orange;">
+
+                            <div
+                                style="display:inline-block; max-width:50%; min-width:100px; vertical-align:top; width:100%;">
+                                <table style="max-width:300px;">
+                                    <tr>
+                                        <td style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 36px; font-weight: 800; line-height: 48px;"
+                                            class="mobile-center">
+                                            <h1 style="font-size: 36px; font-weight: 800; margin: 0; color: #ffffff;">
+                                                The Winery</h1>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 35px 35px 20px 35px; background-color: #ffffff;">
+                            <table style="max-width:600px;">
+                                <tr>
+                                    <td
+                                        style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;">
+                                        <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png"
+                                            width="125" height="120"
+                                            style="display: block; border: 0px; margin: 0 auto;"
+                                            alt='success image' /><br>
+                                        <h2
+                                            style="font-size: 30px; font-weight: 800; line-height: 36px; color: #333333; margin: 0; text-align: center;">
+                                            Thank you for your order!
+                                        </h2>
+                                        <p
+                                            style="font-size: 16px; font-weight: 400; line-height: 24px; color: #777777; text-align: center;">
+                                            Hi {{ order.first_name }}, your recent order with The Winery was succesful.
+                                            Your
+                                            order number is <strong>{{ order.order_number }}</strong>. Please quote this
+                                            number if you
+                                            have any problems accessing your purchases. We hope to see you again soon.
+                                        </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="padding-top: 20px;">
+                                        <table>
+                                            <tr>
+                                                <td class='td-header-grey'
+                                                    style="width: 45%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                    Product
+                                                </td>
+                                                <td class='td-header-grey'
+                                                    style="width: 45%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                    Vintage
+                                                </td>
+                                                <td class='td-header-grey'
+                                                    style="width: 45%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                    Quantity
+                                                </td>
+                                                <td class='td-header-grey'
+                                                    style="width: 20%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                    Price
+                                                </td>
+                                                <td class='td-header-grey'
+                                                    style="width: 20%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                    Link
+                                                </td>
+                                            </tr>
+
+
+                                            {% for item in order_items %}
+
+                                            <tr>
+                                                <td
+                                                    style="width: 45%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                    {{ item.product.name }}
+                                                </td>
+                                                <td
+                                                    style="width: 45%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                    {{ item.product.vintage }}
+                                                </td>
+                                                <td
+                                                    style="width: 45%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                    {{ item.product.quantity }}
+                                                </td>
+                                                <td
+                                                    style="width: 20%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                    {{ item.product.price }}
+                                                </td>
+                                                <td
+                                                    style="width: 20%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding: 15px 10px 5px 10px;">
+                                                    <a href="{{ item.product.pdf.url }}" target="_blank">Download</a>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top: 20px;">
+                                        <table>
+                                            <tr>
+                                                <td
+                                                    style="width: 45%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px; border-bottom: 3px solid #eeeeee;">
+                                                    TOTAL
+                                                </td>
+                                                <td
+                                                    style="width: 20%; font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 800; line-height: 24px; padding: 10px;  border-bottom: 3px solid #eeeeee;">
+                                                    {{order.total_cost}}
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0 35px 35px 35px; height: 100%; background-color: #ffffff;">
+                            <table style="max-width:660px;">
+                                <tr>
+                                    <td style="font-size:0;">
+                                        <div
+                                            style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
+
+                                            <table style="max-width:300px;">
+                                                <tr>
+                                                    <td
+                                                        style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
+                                                        <p style="font-weight: 800;">Billing Details</p>
+                                                        <p>{{order.first_name}}<br>{{order.last_name}}<br>{{order.street_address1}}<br>{{order.street_address2}}<br>{{order.country}}<br>{{order.town_or_city}}<br>{{order.postcode}}
+                                                        </p>
+
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div
+                                            style="display:inline-block; max-width:50%; min-width:240px; vertical-align:top; width:100%;">
+                                            <table style="max-width:300px;">
+                                                <tr>
+                                                    <td
+                                                        style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px;">
+                                                        <p style="font-weight: 800;">Please shop again at The Winery!
+                                                        </p>
+                                                        <br />
+                                                        <br />
+                                                        <a href="https://the-winery.herokuapp.com/" target="_blank"
+                                                            style="font-size: 18px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; background-color: orange; padding: 15px; border: 1px solid orange; margin-top: 20px;">Shop
+                                                            Again</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
