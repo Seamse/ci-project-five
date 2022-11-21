@@ -15,4 +15,6 @@ class PostArticleForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'image', 'content', 'status')
+        fields = ('title', 'slug', 'content', 'status',)
+
+    image = forms.ImageField(label='Image', required=False)

@@ -49,22 +49,29 @@ def post_detail(request, slug):
 
 def add_post(request):
     """ Add a new post to the Winery Gazette """
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
+
     if request.method == "POST":
-        form = PostArticleForm(request.POST or None)
+        form = PostArticleForm(request.POST, request.FILES)
         if form.is_valid():
             new_post = form.save(commit=False)
             new_post.title = request.POST["title"]
             new_post.slug = request.POST["slug"]
+            new_post.author = request.user
             new_post.image = request.POST["image"]
             new_post.content = request.POST["content"]
             new_post.status = request.POST["status"]
             new_post.save()
-            return redirect(request.META.get('HTTP_REFERER'))
+            return redirect('the_gazette')
         else:
-            form = PostArticleForm()
-            context = {
-                'form': form
-            }
-        return render(request, 'the_winery_gazette/add_post.html', context)
+            return redirect(('home'))
     else:
-        return redirect('home')
+        form = PostArticleForm()
+
+    template = 'the_winery_gazette/add_post.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
