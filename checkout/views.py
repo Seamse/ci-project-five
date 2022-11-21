@@ -159,10 +159,8 @@ def make_purchase(request, order_number):
 
 def payment_confirmation(data):
     """ post webhook payment confirmation view """
-    # find order and update payment to True
-    NewOrder.objects.filter(order_key=data).update(billing_status=True)
     # find order items and send confirmation email containing links
-    order = NewOrder.objects.get(order_key=data)
+    order = NewOrder.objects.get(order_number=data)
     order_items = OrderLineItem.objects.filter(order=order)
     order_items_url = [item.product.pdf.url for item in order_items]
     subject = 'Your The Winery Order'
