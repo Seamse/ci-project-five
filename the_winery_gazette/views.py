@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, reverse, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from .models import Post
 from .forms import CommentForm, PostArticleForm
 
@@ -46,7 +47,7 @@ def post_detail(request, slug):
 
     return render(request, template_name, context)
 
-
+@login_required
 def add_post(request):
     """ Add a new post to the Winery Gazette """
     if not request.user.is_superuser:
@@ -75,3 +76,47 @@ def add_post(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def edit_post(request, slug):
+    """ Edit a post in the Gazette """
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(Post, slug=slug)
+    if request.method == 'POST':
+        form = PostArticleForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            new_post = form.save(commit=False)
+            new_post.title = request.POST["title"]
+            new_post.slug = request.POST["slug"]
+            new_post.author = request.user
+            new_post.image = request.POST["image"]
+            new_post.content = request.POST["content"]
+            new_post.status = request.POST["status"]
+            new_post.save()
+            return redirect('the_gazette')
+        else:
+            return redirect(reverse('home'))
+    else:
+        form = PostArticleForm(instance=post)
+
+    template = 'the_winery_gazette/edit_post.html'
+    context = {
+        'form': form,
+        'post': post,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_post(request, slug):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
+
+    post = get_object_or_404(Post, slug=slug)
+    post.delete()
+    return redirect(reverse('the_gazette'))

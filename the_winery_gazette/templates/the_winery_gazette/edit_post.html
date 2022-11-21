@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<section class="h-100 h-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-10">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h5 class="mb-3"><a href="{% url 'home' %}" class="text-body"><i
+                                            class="fas fa-long-arrow-alt-left me-2"></i>Main page</a></h5>
+                                <hr>
+                                <div class="text-center mb-3">
+                                    <h3 class="mb-1 text-black fancy-text">Edit post</h3>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-body text-black">
+                                        <form action="" method="POST">
+											{% csrf_token %}
+											{{ form | crispy }}
+											{% if error %}
+											<strong style="color:red;">{{ error }}</strong>
+											{% endif %}
+											<input type="submit" value="Save Changes" class="btn btn-dark mt-3">
+										</form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
