@@ -15,10 +15,8 @@
         {% if request.user.is_superuser %}
         <div class="text-end">
             <small class="ml-3">
-                <a class="text-success btn btn-sm btn-dark"
-                    href="{% url 'edit_post' post.slug %}">Edit</a> |
-                <a class="text-danger btn btn-sm btn-dark"
-                    href="{% url 'delete_post' post.slug %}">Delete</a>
+                <a class="text-success btn btn-sm btn-dark" href="{% url 'edit_post' post.slug %}">Edit</a> |
+                <a class="text-danger btn btn-sm btn-dark" href="{% url 'delete_post' post.slug %}">Delete</a>
             </small>
         </div>
         {% endif %}

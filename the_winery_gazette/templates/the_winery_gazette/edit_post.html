@@ -20,13 +20,13 @@
                                 <div class="card mb-3">
                                     <div class="card-body text-black">
                                         <form action="" method="POST">
-											{% csrf_token %}
-											{{ form | crispy }}
-											{% if error %}
-											<strong style="color:red;">{{ error }}</strong>
-											{% endif %}
-											<input type="submit" value="Save Changes" class="btn btn-dark mt-3">
-										</form>
+                                            {% csrf_token %}
+                                            {{ form | crispy }}
+                                            {% if error %}
+                                            <strong style="color:red;">{{ error }}</strong>
+                                            {% endif %}
+                                            <input type="submit" value="Save Changes" class="btn btn-dark mt-3">
+                                        </form>
                                     </div>
                                 </div>
                             </div>

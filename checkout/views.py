@@ -95,8 +95,6 @@ def checkout(request):
         try:
             account = UserAccount.objects.get(user=request.user)
             form = forms.CheckoutForm(initial={
-                # 'first_name': account.user.get_first_name(),
-                # 'last_name': account.user.get_last_name(),
                 'email': account.user.email,
                 'street_address1': account.default_street_address1,
                 'street_address2': account.default_street_address2,
