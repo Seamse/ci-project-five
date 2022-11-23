@@ -188,7 +188,7 @@ Some of the more prominent bugs were:
   * Sorting works as expected in the shop directly. However when going to the shop through one of the bottom landing page links (wines, sparkling or other), the sort button will cause all products to appear on the page again, rather than only sorting the selection.  
   This still has to be fixed in future.  
   * Rating on the products page is still a mock-up, rather than the actual customer rating which is visible on the product detail page.  
-  * When adding new posts to the Gazette via the website, images do not always show. Adding them via the admin panel works fine however. This still has to be fixed.   
+  * When adding new posts to the Gazette via the website, images only show if they're already in the S3 bucket. So if, for example, you used the image to add a product first, then it will also work for a new post created. But if you create a new post and use a totally new image that has never been used before, it will not show. This still has to be fixed.   
 
 ## Deployment
 This project was deployed using Code Institute's mock terminal for Heroku.  
