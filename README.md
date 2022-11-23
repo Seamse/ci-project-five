@@ -139,7 +139,7 @@ Products can be viewed in more detail on the products detail page.
 * As a site user I want to be able to select/order products based on type or cost etc. so that it's easier to find what I'm looking for:  
 The site can be ordered based on price and rating. There is still a small bug present here however, which will be expanded upon in the bugs section.  
 * As a site owner I want to be able to add products:  
-Products can be added by the super user via the website (and of course the admin panel, but that's less desirable).  
+Products can be added by the super user via the website.  
 * As a site owner I want to be able to edit products:  
 Products can be edited by the super user via the website.  
 * As a site owner I want to be able to delete products:  
@@ -233,4 +233,4 @@ Specifically used pages:
 [Djangocentral blog](https://djangocentral.com/building-a-blog-application-with-django/)  
 [Djangocentral blog comments](https://djangocentral.com/creating-comments-system-with-django/)  
 [Github product reviewing](https://github.com/ksudarshan26/Product-Review-and-Rating-using-Django-Frameworks)  
-[Daniel Callaghan's E-biblio project](https://github.com/xiaoniuniu89/ebibliop5) (in an attempt to get webhooks to agree with me, but this is still a work in progress. Order confirmation via e-mail is to be a future addition after all.)  
+[Daniel Callaghan's E-biblio project](https://github.com/xiaoniuniu89/ebibliop5) (in an attempt to get webhooks to agree with me, but this is still a work in progress. Order confirmation via e-mail is to be a future addition.)  
