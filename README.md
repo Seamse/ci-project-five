@@ -53,7 +53,14 @@
 
 ### Site goals
 * The site is first and foremost a webshop which aims to sell products to its users.
-* As a secondary goal the site hopes to entertain and enthuse people for the world of wine beyond their local supermarket.
+* As a secondary goal the site hopes to entertain and enthuse people for the world of wine beyond their local supermarket.  
+
+### Wireframes  
+* Some of my original wireframes, though I eventually changed the landing page to a moving carrousel to draw more attention to the separate features of the site, such as the Winery Gazette etc.  
+![Landing Page Wireframe](media/landing_page_wireframe.jpg)  
+
+* The shop has remained mostly the same as I preferred a simple, clean layout, such as was used in the Boutique Ado project.  
+![Shop Wireframe](media/shop_wireframe.jpg)  
 
 ## Features  
 ### Existing features
@@ -76,8 +83,7 @@
 ##### As, due to time constrictions, not all elements of the website are functional yet, there are quite a few things that can still be implemented:
 * Though site users (who are logged in) can actively review and rate products. Their average ratings only show on the product detail page at this time.  
   The rating visible in the main shop is still a mock-up.  
-* Reviews and blog comments can only be approved via the admin panel, not yet directly via the site.  
-* Blog posts can only be made via the admin panel, not yet directly via the site.  
+* Reviews and blog comments can only be approved via the admin panel, not yet directly via the site.   
 * Perhaps video footage could be added to the blog for more interactivity.  
 * Overall UX and user friendliness could be improved with for example success and error messages.  
 
@@ -123,8 +129,7 @@ This is a future addition, as the FAQ page does not exist yet.
 * As a site user I want to be able to create an account:  
 Accounts can be created.  
 * As a site user I want to be able to see my order/payment history:  
-Though a section has been made under the user account where order history can be displayed, this is not yet functional.  
-As such this will be a future addition.  
+Order history can be seen under the "my account" area.  
 * As a site user I want to be able to review products in order to help others make informed decisions:  
 Site users (who are logged in) can leave reviews and ratings on individual products.  
 
@@ -148,7 +153,7 @@ Items can be deleted from the shopping bag.
 * As a site user I want to be able to edit quantities in my shopping bag:  
 Editing quantities inside the basket is not yet possible. This is a future addition.  
 * As a user I want to see a confirmation when I've added or deleted something from my bag, so that I am certain it worked as expected:  
-Confirmations are a future addition. The icon over the basket does change when an item is added however.  
+Confirmations are a future addition. The icon over the basket does change when an item is added or deleted however.  
 
 ##### Checkout
 * As a site user I want to be able to see an overview of my order before checkout:  
@@ -162,10 +167,10 @@ Though users receive a success message on the website, email confirmation is not
 
 ##### Mini Blog
 * As a site owner I want to be able to write semi-regular blog posts in order to keep customers up to date on the shop's recent exploits and keep them interested in our products:  
-The Winery Gazette is created and several posts are displayed as an example. New posts can not yet be added from the website directly however. This will be added in future.  
+The Winery Gazette is created and several posts are displayed as an example. New posts can be added and existing posts can be edited/deleted by the superuser.  
 * As a site user I want to be able to comment on blog posts:  
 Logged in users can comment on the blog posts.  
-* As a site owner I would like to be able to moderate the comments posted on the mini blog in order to prevent potential offense language or abuse:  
+* As a site owner I would like to be able to moderate the comments posted on the mini blog in order to prevent potentially offensive language or abuse:  
 Comments have to be approved before they are displayed. This still has to be done from inside the admin panel however, direct moderation from the website will be a future addition.  
 
 ### Bugs 
@@ -177,12 +182,12 @@ Some of the more prominent bugs were:
   This was fixed with the help of [Stackoverflow](https://stackoverflow.com/questions/53695359/collapsing-navbar-moves-uncollapsable-items-away-from-navbar)  
   * Deleting items from shopping cart was done using pop, which caused the interesting effect of adding back in the previously deleted product when more than one item was deleted in a row.  
   This was fixed by saving the session again after popping, so it wouldn't reset back to the previous one.  
+  * Though the front-end indicated shipping to be €12,- and this is also the amount which was charged, the back-end calculated €200,- for the shipping costs. I had accidentally set the backend to use the "free_delivery_from" amount (which is €200,-) as the shipping cost rather than "standard_delivery". This has now been corrected.  
   
 * Unsolved bugs  
   * Sorting works as expected in the shop directly. However when going to the shop through one of the bottom landing page links (wines, sparkling or other), the sort button will cause all products to appear on the page again, rather than only sorting the selection.  
   This still has to be fixed in future.  
-  * Rating on the products page is still a mock-up, rather than the actual customer rating which is visible on the product detail page.    
-  * Though the add post button has been added to the Winery Gazette page for super users, it currently leads to a 404 error page.  
+  * Rating on the products page is still a mock-up, rather than the actual customer rating which is visible on the product detail page.      
 
 ## Deployment
 This project was deployed using Code Institute's mock terminal for Heroku.  
