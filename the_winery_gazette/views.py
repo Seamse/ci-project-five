@@ -47,6 +47,7 @@ def post_detail(request, slug):
 
     return render(request, template_name, context)
 
+
 @login_required
 def add_post(request):
     """ Add a new post to the Winery Gazette """
