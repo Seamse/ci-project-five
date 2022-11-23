@@ -18,6 +18,13 @@
                                         <p class="mb-1 text-body">Your order details regarding order:
                                             {{ order.order_number }}</p>
                                         <p class="mb-1 text-body">This order was placed on: {{ order.date }}</p>
+                                        <p class="mb-1 text-body">The total cost 
+                                            {% if order.delivery_cost > 0 %} 
+                                            including €12,- shipping was: €{{ order.total_cost }}
+                                            {% else %} 
+                                            was: €{{ order.total_cost }}. You received free shipping for this order.
+                                            {% endif %}
+                                        </p>
                                     </div>
                                 </div>
 
