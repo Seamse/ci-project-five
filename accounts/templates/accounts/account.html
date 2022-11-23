@@ -64,20 +64,20 @@
         </div>
     </div>
     {% else %}
-    <div class="row"></div>
-    <div class="col">
-        <hr>
-        <h2 class="logo-font mb-4">Welcome to the accounts page! Kindly:</h2>
-        <hr>
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Welcome to the accounts page! Kindly:</h2>
+            <hr>
+        </div>
     </div>
-</div>
-<div class="row text-center">
-    <div class="col">
-        <a href="{% url 'account_login' %}" class="btn btn-lg btn-dark text-white">Login to my Winery account</a>
+    <div class="row text-center">
+        <div class="col">
+            <a href="{% url 'account_login' %}" class="btn btn-lg btn-dark text-white">Login to my Winery account</a>
+        </div>
+        <div class="col">
+            <a href="{% url 'account_signup' %}" class="btn btn-lg btn-dark text-white">Create a Winery account</a>
+        </div>
     </div>
-    <div class="col">
-        <a href="{% url 'account_signup' %}" class="btn btn-lg btn-dark text-white">Create a Winery account</a>
-    </div>
-</div>
-{% endif %}
-{% endblock %}
+    {% endif %}
+    {% endblock %}
