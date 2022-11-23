@@ -233,3 +233,4 @@ Specifically used pages:
 [Djangocentral blog](https://djangocentral.com/building-a-blog-application-with-django/)  
 [Djangocentral blog comments](https://djangocentral.com/creating-comments-system-with-django/)  
 [Github product reviewing](https://github.com/ksudarshan26/Product-Review-and-Rating-using-Django-Frameworks)  
+[Daniel Callaghan's E-biblio project](https://github.com/xiaoniuniu89/ebibliop5) (in an attempt to get webhooks to agree with me, but this is still a work in progress. Order confirmation via e-mail is to be a future addition after all.)  
